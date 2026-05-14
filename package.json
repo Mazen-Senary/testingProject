@@ -1,0 +1,16 @@
+{
+  "name": "7th-testing",
+  "version": "1.0.0",
+  "description": "7th testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mazen",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^6.2.2",
+    "cypress": "^15.12.0",
+    "mocha": "^11.7.5"
+  }
+}

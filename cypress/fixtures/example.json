@@ -1,0 +1,23 @@
+{
+ "websiteUrl":"https://practicesoftwaretesting.com",
+ "loginUrl":"https://practicesoftwaretesting.com/auth/login",
+ "validEmail":"customer2@practicesoftwaretesting.com",
+ "validPassword":"welcome01",
+ "invalidEmail":"arthurmorgan@gmail.com",
+ "invalidPassword":"Testing@2025",
+ "validProduct":"hammer",
+ "invalidProduct":"laptop",
+ "productUrl":"https://practicesoftwaretesting.com/product/01KNAWMRM57JW23CT6DBDY5HQM",
+"cartUrl": "https://practicesoftwaretesting.com/checkout",
+"contactUrl": "https://practicesoftwaretesting.com/contact",
+"firstName":"arthur",
+"lastName":"morgan",
+"email":"arthurmorgan@gmail.com",
+"message":"LEEEEEEEEEEEEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNYYYYYYYYYYYYYYYYYY",
+"selectSubject":"webmaster",
+"forgetPass":" https://practicesoftwaretesting.com/auth/forgot-password",
+"favproducturl":"https://practicesoftwaretesting.com/product/01KNAS6P8VBZ63EY08Y78SGK3M",
+"favouritePageUrl":"https://practicesoftwaretesting.com/account/favorites",
+"loginACCOUNT1":"admin@practicesoftwaretesting.com",
+"loginPASSWORD1":"welcome01"
+}
