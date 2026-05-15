@@ -1,5 +1,4 @@
 name: Cypress Tests
-# trigger workflow
 
 on: [push, pull_request]
 
@@ -16,7 +15,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Install Cypress binary
+        run: npx cypress install
 
       - name: Run Cypress tests
         run: npx cypress run --headless
