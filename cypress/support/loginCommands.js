@@ -11,5 +11,5 @@ cy.get('[data-test="login-submit"]').click();
 
 })
 Cypress.Commands.add('forgotPasswordBtn',() => {
-    cy.get('a[" href="/contact_us"]').click();
+    cy.get('[data-test="forgot-password-submit"]').click();
 })

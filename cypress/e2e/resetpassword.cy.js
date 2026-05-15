@@ -1,3 +1,5 @@
+import ResetPasswordPage from "../support/POM/restpass-pom";
+const resetPass = new ResetPasswordPage();
 describe('reset password', () => {
     before(function () {
         cy.fixture("example").then(function (data) {
@@ -5,31 +7,22 @@ describe('reset password', () => {
         });
     })
     beforeEach(function () {
-        cy.visit(data.forgetPass)
+        resetPass.resetPassNavigation();
     })
     it('reset password with valid email', () => {
-        cy.emailAddress().type(data.validEmail);
-        cy.forgotPasswordBtn();
-        cy.wait(2000)
-        cy.url().should('include', 'forgot-password')
-        cy.get('.alert-success').should('be.visible')
-        cy.contains('page.forgot-password.confirm').should('be.visible')
+       resetPass.enterEmail();
+        resetPass.forgotPasswordBtn();
+        resetPass.waitForProcessing();
+       resetPass.validEmailAssertions();
     })
     it('2-reset password with empty email field', () => {
-
-        cy.forgotPasswordBtn();
-
-        cy.get('[data-test="email-error"]').should('be.visible')
-        cy.url().should('include', 'forgot-password')
-        cy.get('.alert-success').should('not.exist')
+        resetPass.forgotPasswordBtn();
+        resetPass.emptyEmailAssertions();
     });
     it('3-reset password with invalid email ', () => {
-        cy.emailAddress().type(data.invalidEmail);
-        cy.forgotPasswordBtn();
-        cy.wait(2000)
-        cy.get('.alert-danger').should('be.visible')
-        cy.contains('The selected email is invalid.').should('be.visible')
-        cy.url().should('include', 'forgot-password')
-
+        resetPass.invalidEmail();
+        resetPass.forgotPasswordBtn();
+        resetPass.waitForProcessing();
+        resetPass.invalidEmailAssertions();
     });
 });
